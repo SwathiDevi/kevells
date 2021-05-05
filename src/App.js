@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">User Id</th>
@@ -58,14 +58,14 @@ function App() {
         </thead>
         <tbody>
           {userList && userList.map((item, index) =>
-            <tr key={item.id}>
-              <th scope="row">{item.id}</th>
-              <td className="w-50">{item.title}</td>
-              <td className="w-75">{item.body}</td>
-              <td><Button onClick={()=>editItem(item)}>Edit</Button></td>
-              <td><Button onClick={()=>removeItem(item.id)}>Delete</Button></td>
-            </tr>
-          )
+              <tr key={item.id}>
+                <th scope="row">{item.id}</th>
+                <td className="w-50">{item.title}</td>
+                <td className="w-75">{item.body}</td>
+                <td><Button onClick={()=>editItem(item)}>Edit</Button></td>
+                <td><Button onClick={()=>removeItem(item.id)}>Delete</Button></td>
+              </tr>
+            )
           }
         </tbody>
       </table>
